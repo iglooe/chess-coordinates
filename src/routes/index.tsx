@@ -1,9 +1,9 @@
-import Board from "@/components/Board"
+import Game from "@/components/Game"
 
 export default function Home() {
   return (
-    <main class="">
-        <Board />
+    <main>
+        <Game />
     </main>
   );
 }
