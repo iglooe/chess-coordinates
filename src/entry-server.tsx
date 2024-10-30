@@ -1,6 +1,8 @@
 // @refresh reload
 import { createHandler, StartServer } from "@solidjs/start/server";
 
+import "./app.css"
+
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
