@@ -62,10 +62,16 @@ const Game = () => {
   return (
     <GameContext.Provider value={gameContextValue}>
       <div class="flex flex-1 flex-col gap-4 p-4">
-        <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-          <Settings />
-          <ChessBoard />
-          <GameControls />
+        <div class="grid auto-rows-min lg:mx-24 lg:grid-rows-3 lg:grid-flow-col gap-4">
+          <div class="row-span-3 col-span-6">
+            <ChessBoard />
+          </div>
+          <div class="col-span-1">
+            <GameControls />
+          </div>
+          <div class="row-span-2 col-span-1">
+            <Settings />
+          </div>
         </div>
       </div>
     </GameContext.Provider>

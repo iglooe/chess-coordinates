@@ -19,7 +19,7 @@ const GameControls: Component = () => {
     <Show
       when={gameContext.isGameActive()}
       fallback={
-        <div class="flex items-center justify-center p-4">
+        <div class="flex items-center justify-center lg:pt-8">
           <Button
             size="lg"
             class="uppercase font-semibold tracking-wider"

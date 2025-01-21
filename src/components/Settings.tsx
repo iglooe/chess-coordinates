@@ -33,16 +33,18 @@ export default Settings;
 
 const RadioGroup: Component = () => {
   return (
-    <Switch
-      checked={showCoordinates()}
-      onChange={() => setShowCoordinates(!showCoordinates())}
-      id="toggle-switch"
-      class="flex items-center space-x-2"
-    >
-      <SwitchControl>
-        <SwitchThumb />
-      </SwitchControl>
-      <SwitchLabel>Coordinates on every square</SwitchLabel>
-    </Switch>
+    <div class="flex items-center justify-center">
+      <Switch
+        checked={showCoordinates()}
+        onChange={() => setShowCoordinates(!showCoordinates())}
+        id="toggle-switch"
+        class="flex items-center space-x-2"
+      >
+        <SwitchControl>
+          <SwitchThumb />
+        </SwitchControl>
+        <SwitchLabel>Coordinates on every square</SwitchLabel>
+      </Switch>
+    </div>
   );
 };

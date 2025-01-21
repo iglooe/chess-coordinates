@@ -9,7 +9,7 @@ const ChessBoard: Component = () => {
   const ranks = ["8", "7", "6", "5", "4", "3", "2", "1"];
 
   return (
-    <div class="w-full h-full p-4">
+    <div class="w-full h-full">
       <div
         class="resize-x overflow-auto no-scrollbar min-w-[200px] max-w-4xl w-full h-fit 
                 border-2 border-gray-300 rounded"
