@@ -1,4 +1,6 @@
-import { Component } from "solid-js";
+import { Component, Show } from "solid-js";
+
+import { showCoordinates } from "@/utils/Store";
 
 interface ChessSquareProps {
   file: string;
@@ -19,14 +21,16 @@ const ChessSquare: Component<ChessSquareProps> = (props) => {
         cursor-pointer
       `}
     >
-      <span
-        class={`
-          text-[length:min(0.75vw,1rem)] uppercase font-bold absolute top-1 right-1 opacity-50
-        ${props.isLight ? "text-chess-dark" : "text-chess-light"}
-      `}
-      >
-        {square}
-      </span>
+      <Show when={showCoordinates()}>
+        <span
+          class={`
+            text-xs uppercase font-bold absolute top-1 right-1 opacity-50
+            ${props.isLight ? "text-chess-dark" : "text-chess-light"}
+          `}
+        >
+          {square}
+        </span>
+      </Show>
     </button>
   );
 };
