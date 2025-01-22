@@ -1,4 +1,4 @@
-import { createSignal, createEffect, Component, onCleanup } from "solid-js";
+import { createSignal, createEffect, onCleanup } from "solid-js";
 
 import { GameContext } from "@/utils/GameContext";
 import { ChessSquareQueue } from "../utils/ChessSquareQueue";
@@ -22,6 +22,11 @@ const Game = () => {
     setIsGameActive(true);
     setTargetSquare(newQueue.getCurrentSquare());
     setNextSquare(newQueue.getNextSquare());
+  };
+
+  const resetGame = () => {
+    setScore(0);
+    setIsGameActive(false);
   };
 
   const handleSquareClick = (square: string) => {
@@ -57,6 +62,7 @@ const Game = () => {
     nextSquare,
     handleSquareClick,
     startGame,
+    resetGame,
   };
 
   return (
